@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #0a0b0d;
+    color: #e2e8f0;
+    font-family: 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: #111318; }
+  ::-webkit-scrollbar-thumb { background: #252b35; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #2196ff; }
+}
+
+@layer components {
+  .card {
+    @apply bg-surface-2 rounded-2xl p-5 shadow-card border border-surface-4/50;
+  }
+  
+  .btn-primary {
+    @apply bg-brand-500 text-white px-4 py-2 rounded-xl font-medium text-sm
+           hover:bg-brand-400 active:bg-brand-600 
+           transition-all duration-150 disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+  
+  .btn-secondary {
+    @apply bg-surface-3 text-slate-300 px-4 py-2 rounded-xl font-medium text-sm
+           hover:bg-surface-4 border border-surface-4
+           transition-all duration-150 disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+  
+  .btn-danger {
+    @apply bg-accent-red/10 text-accent-red px-4 py-2 rounded-xl font-medium text-sm
+           hover:bg-accent-red/20 border border-accent-red/20
+           transition-all duration-150 disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+  
+  .btn-ghost {
+    @apply text-slate-400 px-3 py-2 rounded-lg font-medium text-sm
+           hover:text-slate-200 hover:bg-surface-3
+           transition-all duration-150;
+  }
+
+  .input {
+    @apply w-full bg-surface-3 border border-surface-4 text-slate-200 text-sm
+           px-3 py-2.5 rounded-xl outline-none placeholder:text-slate-600
+           focus:border-brand-500/60 focus:ring-1 focus:ring-brand-500/20
+           transition-all duration-150;
+  }
+  
+  .select {
+    @apply w-full bg-surface-3 border border-surface-4 text-slate-200 text-sm
+           px-3 py-2.5 rounded-xl outline-none
+           focus:border-brand-500/60 focus:ring-1 focus:ring-brand-500/20
+           transition-all duration-150 cursor-pointer;
+  }
+  
+  .label {
+    @apply block text-xs font-medium text-slate-500 mb-1.5 uppercase tracking-wider;
+  }
+  
+  .status-pill {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium;
+  }
+  
+  .table-row {
+    @apply border-b border-surface-3 hover:bg-surface-3/50 transition-colors duration-100;
+  }
+  
+  .table-cell {
+    @apply px-4 py-3 text-sm;
+  }
+  
+  .table-head {
+    @apply px-4 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider;
+  }
+
+  .page-title {
+    @apply font-display text-2xl font-bold text-slate-100;
+  }
+  
+  .section-title {
+    @apply font-medium text-slate-300 text-base;
+  }
+}
