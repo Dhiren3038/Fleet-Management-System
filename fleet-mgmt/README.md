@@ -45,7 +45,7 @@ npm run dev    # Start Vite dev server on :5173
 ```
 PORT=5000
 MONGODB_URI=mongodb://localhost:27017/fleet_mgmt
-JWT_SECRET=your_super_secret_key_here
+JWT_SECRET=super_fleet_management_system
 JWT_EXPIRES_IN=7d
 NODE_ENV=development
 ```
